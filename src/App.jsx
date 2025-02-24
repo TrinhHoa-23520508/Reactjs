@@ -1,33 +1,23 @@
-import { useState } from 'react'
+import "./components/todo/todo.css"
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+const App = () => {
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Hello world & hoidanit</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+       <div className="todo-container">
+        <div className="todo-title">To Do List</div>
+        <div className="todo-new">
+          <input type="text"/>
+          <button>Add</button>
+        </div>
+        <div className="todo-data">
+          <div className="todo-item">learn</div>
+          <div className="todo-item">watching film</div>
+        </div>
+        <div className="todo-image">
+          <img src={reactLogo} className="logo"/>
+        </div>
+       </div>
     </>
   )
 }
