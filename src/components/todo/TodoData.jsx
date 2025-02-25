@@ -7,6 +7,9 @@ const TodoData = (props) =>{
         <div>My name is {name}</div>
         <div className="todo-item">learn</div>
         <div className="todo-item">watching film</div>
+        <div>
+            {JSON.stringify(props.toDoList)}
+        </div>
       </div>
       </>);
 }
