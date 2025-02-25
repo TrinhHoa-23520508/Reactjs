@@ -23,11 +23,14 @@ const App = () => {
         <div className="todo-title">ToDo List</div>
         <TodoNew
          addNewToDo={addNewToDo}/>
-        <TodoData
-         toDoList={toDoList}/>
+         {toDoList.length == 0 ?
         <div className="todo-image">
           <img src={reactLogo} className="logo"/>
         </div>
+        :
+        <TodoData
+         toDoList={toDoList}/>
+         }
        </div>
     </>
   )
