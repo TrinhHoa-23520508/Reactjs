@@ -1,7 +1,7 @@
 import "./components/todo/todo.css"
 import reactLogo from './assets/react.svg'
-import TodoNew from "./components/todo/TodoNew"
 import TodoData from "./components/todo/TodoData"
+import TodoNew from "./components/todo/TodoNew"
 import { useState } from "react"
 const App = () => {
   const name = "Trinh Hoa";
@@ -15,8 +15,15 @@ const App = () => {
     {id: 2, name: "watching film"}
   ]
   )
+  const randomIntFromInterval = (min, max) => { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
+    }
   const addNewToDo = (name) =>{
-    alert(`My name is ${name}`);
+    const newToDo = {
+      id: randomIntFromInterval(1, 1000000),
+      name: name
+    }
+    setToDoList([...toDoList, newToDo]);
   }
    return (
     <>
