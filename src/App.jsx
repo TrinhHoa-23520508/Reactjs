@@ -17,6 +17,12 @@ const App = () => {
     }
     setToDoList([...toDoList, newToDo]);
   }
+  const deleteToDo = (id) =>{
+    const newToDo = toDoList.filter((toDo) => {
+      return toDo.id!==id;
+    });
+    setToDoList(newToDo);
+  }
    return (
     <>
        <div className="todo-container">
@@ -29,7 +35,8 @@ const App = () => {
         </div>
         :
         <TodoData
-         toDoList={toDoList}/>
+         toDoList={toDoList}
+         deleteToDo={deleteToDo}/>
          }
        </div>
     </>
