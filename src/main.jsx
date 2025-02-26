@@ -1,11 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import './styles/global.css'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
+import LoginPage from './pages/Login.jsx';
+import RegisterPage from './pages/Register.jsx';
+import UserPage from './pages/Users.jsx';
+import ProductPage from './pages/Product.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,19 +17,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <div>Login page</div>,
+    element: <LoginPage/>,
   },
   {
     path: "/register",
-    element: <div>Register page</div>,
+    element: <RegisterPage/>,
   },
   {
     path: "/users",
-    element: <div>Users page</div>,
+    element: <UserPage/>,
   },
   {
     path: "/products",
-    element: <div>Products page</div>,
+    element: <ProductPage/>,
   },
 ]);
 
