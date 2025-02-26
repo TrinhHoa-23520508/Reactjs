@@ -10,12 +10,17 @@ import LoginPage from './pages/Login.jsx';
 import RegisterPage from './pages/Register.jsx';
 import UserPage from './pages/Users.jsx';
 import ProductPage from './pages/Product.jsx';
+import ToDoApp from './components/todo/ToDoApp.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
     //nested route
     children: [
+      {
+        index: true,
+        element: <ToDoApp/>
+      },
       {
         path: "/users",
         element: <UserPage/>,
