@@ -5,6 +5,7 @@ import TodoNew from "./components/todo/TodoNew"
 import { useState } from "react"
 import Header from './components/layout/header.jsx'
 import Footer from "./components/layout/footer.jsx"
+import { Outlet } from "react-router-dom"
 const App = () => {
   const [toDoList, setToDoList] = useState(
     []
@@ -42,6 +43,7 @@ const App = () => {
          deleteToDo={deleteToDo}/>
          }
        </div>
+       <Outlet/>
        <Footer/>
     </>
   )
